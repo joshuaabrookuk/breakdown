@@ -1,0 +1,17 @@
+AllCops:
+  SuggestExtensions: false
+
+  NewCops: enable
+  Exclude:
+    - Gemfile
+    - spec/spec_helper.rb
+    - spec/encoder_spec.rb
+
+Metrics/BlockLength:
+  Enabled: false
+
+Layout/LineLength:
+  Enabled: false
+
+Naming/PredicateName:
+  Enabled: false
