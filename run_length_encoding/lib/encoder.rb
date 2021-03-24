@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-#This Encoder class includes methods that will chain together and encode strings
+# This Encoder class includes methods that will chain together and encode strings
 class Encoder
   def get_length(str)
     str.length
@@ -19,17 +19,10 @@ class Encoder
   end
 
   def is_all_as?(str)
-    str.chars.each do |char|
-      return false if char != 'a'
-    end
-    true
+    str.chars.all?('a')
   end
 
-def is_all_this_letter?(str, chr)
-  str.chars.each do |char|
-    return false if char != chr
+  def is_all_this_letter?(str, chr)
+    str.chars.all?(chr)
   end
-  true
-end
-
 end
