@@ -19,9 +19,17 @@ class Encoder
   end
 
   def is_all_as?(str)
-    str.chars.each do |x|
-      return false if x != 'a'
+    str.chars.each do |char|
+      return false if char != 'a'
     end
     true
   end
+
+def is_all_this_letter?(str, chr)
+  str.chars.each do |char|
+    return false if char != chr
+  end
+  true
+end
+
 end
