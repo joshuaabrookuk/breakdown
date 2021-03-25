@@ -25,4 +25,8 @@ class Encoder
   def is_all_this_letter?(str, chr)
     str.chars.all?(chr)
   end
+
+  def is_all_first_letter?(str)
+    str.chars.all?(str[0])
+  end
 end
