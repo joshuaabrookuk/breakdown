@@ -41,7 +41,7 @@ class Encoder
   end
 
   def get_first_run(str)
-    string = ""
+    string = ''
     str.chars.each do |char|
       break unless char == str[0]
 
@@ -50,4 +50,9 @@ class Encoder
     string
   end
 
+  def get_after_first_run(str)
+    first_length = get_first_run(str).size
+    str.slice(first_length..-1)
+  end
+  
 end
