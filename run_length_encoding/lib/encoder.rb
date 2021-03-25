@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# frozen_string_literal: false
 
 # This Encoder class includes methods that will chain together and encode strings
 class Encoder
@@ -39,4 +39,15 @@ class Encoder
     end
     count
   end
+
+  def get_first_run(str)
+    string = ""
+    str.chars.each do |char|
+      break unless char == str[0]
+
+      string << char
+    end
+    string
+  end
+
 end
