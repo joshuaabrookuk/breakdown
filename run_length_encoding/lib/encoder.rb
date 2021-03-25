@@ -31,16 +31,12 @@ class Encoder
   end
 
   def get_length_of_first_run(str)
-    first = str[0]
     count = 0
+    str.chars.each do |char|
+      break unless char == str[0]
 
-    str.chars.each do |x|
-      if x == first
-        count += 1
-      else break
-      end
+      count += 1
     end
     count
   end
-
 end
