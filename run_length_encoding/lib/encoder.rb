@@ -78,6 +78,6 @@ class Encoder
   end
 
   def encode(str)
-    get_first_letter_and_length_of_runs_with_special(str).join('')
+    get_first_letter_and_length_of_runs_with_special(str).join
   end
 end
