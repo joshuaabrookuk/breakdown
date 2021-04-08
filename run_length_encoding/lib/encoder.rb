@@ -73,4 +73,14 @@ class Encoder
     end
   end
 
+  def get_first_letter_and_length_of_runs_with_special(str)
+    get_all_runs(str).map do |chunk|
+      if chunk.size == 1
+        chunk[0]
+      else
+        chunk[0] + chunk.length.to_s
+      end
+    end
+  end
+
 end
