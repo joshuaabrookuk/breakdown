@@ -76,4 +76,8 @@ class Encoder
       chunk.size == 1 ? chunk[0] : chunk[0] + chunk.length.to_s
     end
   end
+
+  def encode(str)
+    get_first_letter_and_length_of_runs_with_special(str).join('')
+  end
 end
