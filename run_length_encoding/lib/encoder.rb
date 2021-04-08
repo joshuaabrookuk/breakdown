@@ -67,4 +67,10 @@ class Encoder
     end
   end
 
+  def get_first_letter_and_length_of_runs(str)
+    get_all_runs(str).map do |chunk|
+      chunk[0] + chunk.length.to_s
+    end
+  end
+
 end
