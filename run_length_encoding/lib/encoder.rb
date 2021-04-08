@@ -61,4 +61,10 @@ class Encoder
     end
   end
 
+  def get_lengths_of_all_runs(str)
+    get_all_runs(str).map do |chunk|
+      chunk.length
+    end
+  end
+
 end
