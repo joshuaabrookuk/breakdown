@@ -1,6 +1,6 @@
-# # frozen_string_literal: false
-#
-# # This Encoder class includes methods that will chain together and encode strings
+# frozen_string_literal: false
+
+# This Encoder class includes methods that will chain together and encode strings
 class Encoder
   def get_length(str)
     str.length
@@ -62,9 +62,7 @@ class Encoder
   end
 
   def get_lengths_of_all_runs(str)
-    get_all_runs(str).map do |chunk|
-      chunk.length
-    end
+    get_all_runs(str).map(&:length)
   end
 
   def get_first_letter_and_length_of_runs(str)
@@ -75,12 +73,7 @@ class Encoder
 
   def get_first_letter_and_length_of_runs_with_special(str)
     get_all_runs(str).map do |chunk|
-      if chunk.size == 1
-        chunk[0]
-      else
-        chunk[0] + chunk.length.to_s
-      end
+      chunk.size == 1 ? chunk[0] : chunk[0] + chunk.length.to_s
     end
   end
-
 end
