@@ -1,6 +1,6 @@
-# frozen_string_literal: false
-
-# This Encoder class includes methods that will chain together and encode strings
+# # frozen_string_literal: false
+#
+# # This Encoder class includes methods that will chain together and encode strings
 class Encoder
   def get_length(str)
     str.length
@@ -54,5 +54,11 @@ class Encoder
     first_length = get_first_run(str).size
     str.slice(first_length..-1)
   end
-  
+
+  def get_all_runs(str)
+    str.chars.chunk(&:itself).map do |char|
+      char.last.join
+    end
+  end
+
 end
